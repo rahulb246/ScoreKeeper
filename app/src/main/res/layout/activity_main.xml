@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rahul.scorekeeper.MainActivity"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TeamTitleStyle"
+                        android:text="@string/teat_a" />
+
+                    <TextView
+                        android:id="@+id/team_a_score"
+                        style="@style/ScoreTextViewStyle"
+                        android:text="@string/team_score" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addOneforTeamA"
+                        android:text="@string/plus_one_point" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addtwoforTeamA"
+                        android:text="@string/plus_two_point" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TeamTitleStyle"
+                        android:text="@string/teat_b" />
+
+                    <TextView
+                        android:id="@+id/team_b_score"
+                        style="@style/ScoreTextViewStyle"
+                        android:text="@string/team_score" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addOneforTeamB"
+                        android:text="@string/plus_one_point" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:onClick="addtwoforTeamB"
+                        android:text="@string/plus_two_point" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="resetScore"
+                    android:text="@string/reset"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/text_color"
+                    android:layout_marginTop="56dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
